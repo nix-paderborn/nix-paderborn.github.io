@@ -1,7 +1,11 @@
-{ buildNpmPackage, nodejs, lib }:
+{
+  buildNpmPackage,
+  nodejs,
+  lib,
+}:
 
 buildNpmPackage {
-  name = "habrawo.nix.ug-website";
+  name = "nix-paderborn.github.io-website";
   nativeBuildInputs = [ nodejs ];
 
   src = lib.fileset.toSource {
@@ -10,10 +14,10 @@ buildNpmPackage {
       ./astro.config.mjs
       ./package-lock.json
       ./package.json
-      ./public
       ./src
       ./tailwind.config.mjs
       ./tsconfig.json
+      ./public
     ];
   };
 

@@ -1,8 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
 
-import logoLandscape from "@images/logo-landscape.svg";
+import logoLandscape from "@images/nix-snowflake-hare-triskele-dark-blue.png";
 
 import mapMacro from "@images/locations/theos/map-macro.png";
 import mapMicro from "@images/locations/theos/map-micro.png";
@@ -12,20 +12,57 @@ import door3 from "@images/locations/theos/door3.jpg";
 import meetingRoom from "@images/locations/theos/meeting-room.jpg";
 ---
 
-<Layout title="Nix Usergroup Hannover Braunschweig Wolfsburg">
-  <Image src={logoLandscape} alt="Nix Usergroup Hannover Braunschweig Wolfsburg" />
-  <h1 class="text-center py-10">Nix(OS) User Group Hannover Braunschweig Wolfsburg</h1>
-  <div class="flex flex-col gap-8">
+<Layout title="Nix Community Paderborn">
+  <Image
+    src={logoLandscape}
+    alt="Nix Community Paderborn"
+    class="w-full object-contain px-2 pt-10 lg:pt-20 lg:px-12 max-w-screen-md mx-auto"
+  />
+  <div
+    class="flex flex-col gap-8 max-w-screen-md mx-auto pb-20 pt-4 px-4 lg:px-0"
+  >
+    <h1 class="text-center">Nix(OS) Community Paderborn</h1>
+    <h2 class="text-center">Heinz-Nix-Dorf</h2>
     <div>
-      <h2 class="pb-4">Contact</h2>
-      <ul class="list-image-flake list-inside">
+      <h2 class="pb-4">Hello!</h2>
+      <p>We're currently planning a first meet-up. Check back for news!</p>
+    </div>
+
+    <!--<ul class="list-image-flake list-inside">
         <li>Whatsapp Group: <a href="https://chat.whatsapp.com/JSWO6lI7Ls5BrRxzpmYKuR">Join Here</a></li>
-        <li>Email Group organizer: jacek@applicative.systems</li>
+        <li>Matrix Chat Room: <a href="https://matrix.to/#/#habrawo:nixos.org">#habrawo:nixos.org</a></li>
+        <li>Group organizer: Email jacek@applicative.systems, Matrix <a href="https://matrix.to/#/@tfc:matrix.org">@tfc:matrix.org</a></li>
       </ul>
     </div>
     <div class="flex flex-col gap-4">
       <h2>Next Meetup</h2>
+      <p>Date: 2024-10-29 Tuesday</p>
+      <p>Location: <a href="/locations/hafven-hannover">Hannover, Hafven</a></p>
+      <p>Time: 18:00 - open end</p>
+      <ul class="list-image-flake list-inside">
+        <li>18:00: Get together</li>
+        <li>18:20: Tech Talk</li>
+        <li>19:20: Discussion</li>
+        <li>20:00: Restaurant or Bar (until open end)</li>
+      </ul>
+      <h2>
+        Tech Talk: asecret - automatically provision secrets through
+        configuration
+      </h2>
+      <p>
+        Service configuration through Nix is a blast!: it is both easily
+        discoverable and does not require expert knowledge. That fun is spoiled
+        whenever we encounter secrets, since their generation usually is not as
+        easily discoverable and does require expert knowledge. Can we maintain
+        the fun when encountering secrets?
+      </p>
+
+      <h2>Last Meetup</h2>
       <p>Date: Tuesday, 2024-09-17</p>
+      <p>
+        Location: <a href="/locations/theos-coworking-space-braunschweig"
+          >Braunschweig, Theos Coworking Space</a>
+      </p>
       <p>Time: 18:00 - open end</p>
 
       <h3>Schedule</h3>
@@ -35,42 +72,6 @@ import meetingRoom from "@images/locations/theos/meeting-room.jpg";
         <li>19:20: Discussion</li>
         <li>20:00: Restaurant or Bar (until open end)</li>
       </ul>
-
-      <h3>Location</h3>
-      <p><b>Physical Address</b>: Theos Coworking Space, Mauernstraße 33, 38100 Braunschweig</p>
-      <p><a href="https://maps.app.goo.gl/9z2hwQFnHChhbqhz5">Google Maps Entry</a></p>
-      <p><b>Website</b>: <a href="https://theoscoworkingspace.de">https://theoscoworkingspace.de</a></p>
-
-      <h3>Directions</h3>
-      <h4>How to get to the location from Braunschweig Main Trainstation</h4>
-      <p>4 different alternative ways:</p>
-      <ul class="list-image-flake list-inside">
-        <li>Take Tram line 5 to "Museumstraße", then go 400m north</li>
-        <li><i>or</i> Take Tram line 1 or 2 to "Rathaus", then go 500m east</li>
-        <li><i>or</i> Take Bus 411 to "Staatstheater"</li>
-        <li><i>or</i> 20 minutes by foot</li>
-      </ul>
-      <Image src={mapMacro} alt="How to get to Theo's Coworking Space from Braunschweig Main Train Station" />
-
-      <h4>Getting to the building from the Steinweg/Staatstheater area:</h4>
-      <Image src={mapMicro} alt="How to get into Theo's Coworking Space from Braunschweig Staatstheater area" />
-
-      <h4>Main entrance door</h4>
-      <p><i>Should be open.</i> If it is closed, message us so we can open it for you!</p>
-      <Image src={door1} alt="The main entrance into the building where Theo's Coworking space is" class="max-w-lg" />
-
-      <h4>Door 2</h4>
-      <p><i>Should be open.</i> If it is closed, message us so we can open it for you!</p>
-      <Image src={door2} alt="Second door to Theo's Coworking Space" class="max-w-lg" />
-
-      <h4>Door 3</h4>
-      <p>Please use the door bell!</p>
-      <Image src={door3} alt="Third door to Theo's Coworking Space" class="max-w-lg" />
-
-      <h4>Meeting Room</h4>
-      <p>Just follow the corridor. The meeting room is on the left!</p>
-      <Image src={meetingRoom} alt="The meeting room inside Theo's Coworking Space" class="max-w-lg" />
-
-    </div>
+    </div>-->
   </div>
 </Layout>

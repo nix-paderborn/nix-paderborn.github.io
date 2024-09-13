@@ -5,22 +5,35 @@ interface Props {
 
 const { title } = Astro.props;
 
-import Footer from '../components/Footer.astro';
-import NavigationBar from '../components/NavigationBar.astro';
+import Footer from "../components/Footer.astro";
 
-import '../style/main.css'
+import "../style/main.css";
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Nix Usergroup Hannover Braunschweig Wolfsburg" />
+    <meta name="description" content="Nix Community Paderborn" />
     <meta name="viewport" content="width=device-width" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <link rel="icon" type="image/svg+xml" href="/icon/favicon.svg" />
+    {
+      ["048", "096", "144", "180", "192", "240"].map((res) => (
+        <link
+          rel="icon"
+          type="image/png"
+          href={"/icon/icon-" + res + ".png"}
+          sizes={res + "x" + res}
+        />
+      ))
+    }
+
     <title>{title}</title>
   </head>
   <body>
-    <main class="max-w-screen-lg mx-auto pb-20 pt-4 lg:pt-20 px-4 lg:px-0">
+    <main class="">
       <slot />
     </main>
     <Footer />
