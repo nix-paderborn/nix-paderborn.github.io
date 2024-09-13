@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+import Footer from '../components/Footer.astro';
+import NavigationBar from '../components/NavigationBar.astro';
+
+import '../style/main.css'
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Nix Usergroup Hannover Braunschweig Wolfsburg" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main class="max-w-screen-lg mx-auto pb-20 pt-4 lg:pt-20 px-4 lg:px-0">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

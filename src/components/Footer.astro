@@ -1,0 +1,19 @@
+---
+---
+<footer class="max-w-screen-xl mx-auto text-gray-500 text-sm">
+  <div class="max-w-screen-xl p-4 flex flex-col gap-4 lg:flex-row md:items-center md:justify-between">
+    <span class="sm:text-center">
+      <a href="/" class="hover:underline">Nix UG HaBraWo</a>
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 font-medium sm:mt-0">
+      {[
+        ["gdpr", "Data Protection / Datenschutz"],
+        ["impressum", "Impressum"]
+       ].map(([page, navHandle]) =>
+        <li>
+          <a href={page} class="hover:underline me-4 md:me-6">{navHandle}</a>
+        </li>
+      )}
+    </ul>
+  </div>
+</footer>
