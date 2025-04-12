@@ -3,3 +3,4 @@ result
 .astro
 .direnv
 **/.DS_Store
+dist/
