@@ -2,14 +2,8 @@
 import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
 
+import mainHall from "@images/locations/garage33/main-hall.jpeg";
 import logoLandscape from "@images/nix-snowflake-hare-triskele-dark-blue.png";
-
-import mapMacro from "@images/locations/theos/map-macro.png";
-import mapMicro from "@images/locations/theos/map-micro.png";
-import door1 from "@images/locations/theos/door1.jpg";
-import door2 from "@images/locations/theos/door2.jpg";
-import door3 from "@images/locations/theos/door3.jpg";
-import meetingRoom from "@images/locations/theos/meeting-room.jpg";
 ---
 
 <Layout title="Nix Community Paderborn">
@@ -22,63 +16,40 @@ import meetingRoom from "@images/locations/theos/meeting-room.jpg";
     class="flex flex-col gap-8 max-w-screen-md mx-auto pb-20 pt-4 px-4 lg:px-0"
   >
     <h1 class="text-center">Nix(OS) Community Paderborn</h1>
-    <h2 class="text-center">Heinz-Nix-Dorf</h2>
-    <div>
-      <h2 class="pb-4">Hello!</h2>
-      <p>We're currently planning a first meet-up. Check back for news!</p>
-    </div>
     <div>
       <h2 class="pb-4">Communication</h2>
       <ul class="list-image-flake list-inside">
-        <li>Matrix Chat Room: <a href="https://matrix.to/#/#paderborn:nixos.org">#paderborn:nixos.org</a></li>
+        <li>
+          Matrix Chat Room: <a href="https://matrix.to/#/#paderborn:nixos.org"
+            >#paderborn:nixos.org</a
+          >
+        </li>
       </ul>
     </div>
-    
 
-    <!--<ul class="list-image-flake list-inside">
-        <li>Whatsapp Group: <a href="https://chat.whatsapp.com/JSWO6lI7Ls5BrRxzpmYKuR">Join Here</a></li>
-        <li>Matrix Chat Room: <a href="https://matrix.to/#/#habrawo:nixos.org">#habrawo:nixos.org</a></li>
-        <li>Group organizer: Email jacek@applicative.systems, Matrix <a href="https://matrix.to/#/@tfc:matrix.org">@tfc:matrix.org</a></li>
-      </ul>
-    </div>
     <div class="flex flex-col gap-4">
-      <h2>Next Meetup</h2>
-      <p>Date: 2024-10-29 Tuesday</p>
-      <p>Location: <a href="/locations/hafven-hannover">Hannover, Hafven</a></p>
-      <p>Time: 18:00 - open end</p>
+      <h2>First Meetup</h2>
+      <p>Date: 2025-05-08 Tuesday</p>
+      <p>
+        Location: <a href="/locations/garage33">garage33, Paderborn</a>
+        Registration: <a
+          href="https://cryptpad.fr/form/#/2/form/view/7z3usfXPYASkxl+Xmt97v8sVyHGofg-Dq-57AfOyow8/"
+          >Please let us know you'll participate.</a
+        >
+      </p>
+      <p>Time: 17:30 - open end</p>
       <ul class="list-image-flake list-inside">
-        <li>18:00: Get together</li>
-        <li>18:20: Tech Talk</li>
-        <li>19:20: Discussion</li>
+        <li>17:30: Get together</li>
+        <li>18:00: Tech Talk</li>
+        <li>19:00: Discussion</li>
         <li>20:00: Restaurant or Bar (until open end)</li>
       </ul>
-      <h2>
-        Tech Talk: asecret - automatically provision secrets through
-        configuration
-      </h2>
+      <h2>Tech Talk: Introduction: What is Nix / NixOS?</h2>
       <p>
-        Service configuration through Nix is a blast!: it is both easily
-        discoverable and does not require expert knowledge. That fun is spoiled
-        whenever we encounter secrets, since their generation usually is not as
-        easily discoverable and does require expert knowledge. Can we maintain
-        the fun when encountering secrets?
+        This is intended as an introduction for those who arn't familiar with
+        Nix yet.
       </p>
-
-      <h2>Last Meetup</h2>
-      <p>Date: Tuesday, 2024-09-17</p>
-      <p>
-        Location: <a href="/locations/theos-coworking-space-braunschweig"
-          >Braunschweig, Theos Coworking Space</a>
-      </p>
-      <p>Time: 18:00 - open end</p>
-
-      <h3>Schedule</h3>
-      <ul class="list-image-flake list-inside">
-        <li>18:00: Get together</li>
-        <li>18:20: Talk</li>
-        <li>19:20: Discussion</li>
-        <li>20:00: Restaurant or Bar (until open end)</li>
-      </ul>
-    </div>-->
+      <Image src={mainHall} alt="Main hall of garage33" />
+    </div>
   </div>
 </Layout>

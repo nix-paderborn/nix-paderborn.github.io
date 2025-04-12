@@ -1,0 +1,55 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import map from "@images/locations/garage33/map.jpeg";
+
+import mainEntrance from "@images/locations/garage33/entrance.jpeg";
+import mainHall from "@images/locations/garage33/main-hall.jpeg";
+import meetingRoom from "@images/locations/garage33/meeting-room.jpeg";
+---
+
+<Layout title="Nix Community Paderborn Meetup Location: garage33, Paderborn">
+  <div
+    class="flex flex-col gap-8 max-w-screen-md mx-auto pb-20 pt-4 px-4 lg:px-0"
+  >
+    <div class="flex flex-col gap-4">
+      <h1>Location: garage33</h1>
+      <p><b>Physical Address</b>: garage33, Ausblick 1, 331002 Paderborn</p>
+      <p>
+        <a href="https://maps.app.goo.gl/FMvbdTZs1b7iWZsR6">Google Maps Entry</a
+        >
+      </p>
+      <p>
+        <b>Website</b>: <a href="https://www.tecup.de">https://www.tecup.de</a>
+      </p>
+
+      <h2>Directions</h2>
+      <h3>By bus</h3>
+      <ul class="list-image-flake list-inside">
+        <li>Schulze-Delitzsch-Str. (Line 7, 12)</li>
+        <li>Ludwigsfelder Ring (Line 20)</li>
+        <li>Go to garage33 by foot (280m)</li>
+      </ul>
+      <Image src={map} alt="How to get to garage33" />
+      <h3>By bike/car</h3>
+      <ul class="list-image-flake list-inside">
+        <li>
+          Warning: Google Maps misleads you when selecting a route to garage33.
+          There is access from "Berliner Ring".
+        </li>
+        <li>
+          Use the following location as destination: <a
+            href="https://maps.app.goo.gl/FMvbdTZs1b7iWZsR6"
+            >https://maps.app.goo.gl/FMvbdTZs1b7iWZsR6</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <h2>Main Entrance</h2>
+    <Image src={mainEntrance} alt="Main entrance of garage33" />
+    <Image src={mainHall} alt="Main hall of garage33" />
+    <Image src={meetingRoom} alt="Meeting room" />
+  </div>
+</Layout>
